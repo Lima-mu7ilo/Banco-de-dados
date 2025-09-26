@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/usuarios";
+const API_URL = "http://localhost:3005/usuarios";
 
 // Seleção de elementos do HTML
 const userCardsContainer = document.getElementById('user-cards-container');

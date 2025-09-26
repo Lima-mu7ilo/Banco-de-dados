@@ -1,0 +1,224 @@
+/* Reset básico para melhor controle de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Usando a fonte linkada no HTML */
+}
+
+body {
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333;
+}
+
+/* 1. ESTILO DO CABEÇALHO (HEADER) */
+.cabecalho {
+    background-color: #A00000; /* Vermelho escuro ou cor principal da marca */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #FFC107; /* Borda amarela/dourada para destaque */
+}
+
+.cabecalho h1 {
+    font-size: 3em; /* Tamanho grande para o nome da loja */
+    margin-bottom: 5px;
+}
+
+.cabecalho .logo img {
+    max-width: 150px; /* Tamanho da logo */
+    height: 130px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Se a logo for circular */
+}
+
+.cabecalho .slogan {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+/* 2. ESTILO DA NAVEGAÇÃO (NAV) */
+.navegacao {
+    background-color: #333; /* Fundo escuro para contraste */
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaço entre os links */
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #FFC107; /* Cor de destaque */
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.navegacao a:hover {
+    color: white; /* Muda a cor ao passar o mouse */
+    border-bottom: 2px solid white;
+}
+
+/* 3. ESTILO DA SEÇÃO PRINCIPAL E DO GRID */
+.secao-cardapio {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto; /* Centraliza a seção e dá margem */
+    padding: 20px;
+}
+
+.secao-cardapio h2 {
+    text-align: center;
+    color: #A00000;
+    border-bottom: 2px solid #A00000;
+    padding-bottom: 10px;
+    margin: 40px 0 20px 0;
+}
+
+/* O PODER DO GRID PARA AS CAIXAS DE PRODUTOS */
+.grid-produtos {
+    display: grid;
+    /* Define 3 colunas de tamanho igual. Adapta automaticamente para menos colunas se a tela for pequena */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Espaço entre os quadrados de produto */
+}
+
+/* ESTILO DE CADA CAIXA DE PRODUTO */
+.produto-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto-box:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto-img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produto-box h3 {
+    color: #A00000;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.descricao {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #28a745; /* Cor verde para destaque de preço */
+}
+
+/* MEDIA QUERIES (OPCIONAL, MAS IMPORTANTE PARA RESPONSIVIDADE) */
+@media (max-width: 768px) {
+    .grid-produtos {
+        /* Em telas menores (celulares), mostra apenas 1 ou 2 colunas */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cabecalho h1 {
+        font-size: 2em;
+    }
+}
+
+/* ======================================= */
+/* REGRAS DE RESPONSIVIDADE (MEDIA QUERIES) */
+/* ======================================= */
+
+/* Aplica estas regras para telas de até 768px de largura (Tablets e Celulares) */
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        padding: 30px 10px;
+    }
+    
+    .cabecalho .logo img {
+        max-width: 120px; /* Reduz o tamanho da logo */
+    }
+
+    .cabecalho h1 {
+        font-size: 2.2em; /* Reduz o nome da loja */
+    }
+
+    .cabecalho .slogan {
+        font-size: 1em;
+    }
+
+    /* NAVEGAÇÃO (NAV) */
+    .navegacao ul {
+        /* Em telas menores, os links podem ser empilhados verticalmente 
+           ou ter menos espaço (gap) se o display for flex. */
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        gap: 15px;
+    }
+
+    .navegacao a {
+        font-size: 0.9em;
+    }
+
+    /* SEÇÃO PRINCIPAL E PRODUTOS */
+    .secao-cardapio {
+        width: 95%; /* Usa mais da largura da tela */
+        padding: 10px;
+    }
+    
+    .secao-cardapio h2 {
+        font-size: 1.8em;
+        margin: 30px 0 15px 0;
+    }
+
+    /* GRID DE PRODUTOS: A CHAVE DA RESPONSIVIDADE */
+    .grid-produtos {
+        /* Garante que em celulares, os produtos fiquem em uma coluna, 
+           mas permite 2 colunas se houver espaço (minmax) */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .produto-img {
+        height: 180px; /* Reduz um pouco a altura da imagem */
+    }
+
+    .produto-box h3 {
+        font-size: 1.3em;
+    }
+
+}
+
+/* Aplica regras específicas para celulares (telas muito pequenas, até 480px) */
+@media (max-width: 480px) {
+    
+    .grid-produtos {
+        /* Força os produtos a ficarem em uma coluna única para melhor visualização */
+        grid-template-columns: 1fr;
+    }
+    
+    .produto-box {
+        padding: 12px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.8em;
+    }
+}

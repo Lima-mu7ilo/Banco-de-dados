@@ -1,8 +1,8 @@
 //Importação do Express
 const express = require('express'); 
-const cors = require(`cors`)
+const cors = require(`cors`);
 
-//Cirar a Aplicação
+//Criar a Aplicação
 const app = express();
 
 //Permitir trabalhar com JSON
@@ -10,18 +10,18 @@ app.use(express.json());
 app.use(cors())
 
 //Porta onde a API vai rodar
-const PORT = 3001;
+const PORT = 3005;
 
 app.listen(PORT, () =>{
     console.log(`Servidor rodando na porta ${PORT}`)
 })
 
 let usuarios = [
-    {id: 1, nome: "Kauan", idade: 25},
-    {id: 2, nome: "Vitor", idade: 10},
-    {id: 3, nome: "Davi", idade: 22},
-    {id: 4, nome: "Yasmin", idade: 99},
-    {id: 5, nome: "João Vitor", idade: 21}
+    {id: 1, Pedido: "feijoada", preço: 25.30},
+    {id: 2, Pedido: "hamburguer", preço: 10.00},
+    {id: 3, Pedido: "pizza", preço: 22.50},
+    {id: 4, Pedido: "sushi", preço: 99.99},
+    {id: 5, Pedido: "salada", preço: 21.75}
 ]
  
 app.get('/', (req, res) => {

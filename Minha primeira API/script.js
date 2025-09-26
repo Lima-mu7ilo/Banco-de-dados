@@ -154,3 +154,7 @@ window.addEventListener('click', (e) => {
 
 // Carregar usuários ao iniciar
 fetchAndRenderUsers();
+
+
+
+

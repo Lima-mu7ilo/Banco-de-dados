@@ -112,25 +112,30 @@ h2 {
 
 /*Estilização do Modal */
 
-.modal{
+/* Modal centralizado e funcional */
+.modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
-.modal-content{
+.modal-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0,00.3s);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     width: 90%;
     max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 .modal-content h2{
     margin-top: 0;
@@ -203,3 +208,35 @@ h2 {
 #btnListUsers:hover{
     background-color: #196d2d;
 }
+
+.cabecalho {
+    background-color: #A00000; /* Vermelho escuro ou cor principal da marca */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #FFC107; /* Borda amarela/dourada para destaque */
+}
+.cabecalho h1 {
+    font-size: 3em; /* Tamanho grande para o nome da loja */
+    margin-bottom: 5px;
+}
+
+.cabecalho .logo img {
+    max-width: 150px; /* Tamanho da logo */
+    height: 130px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Se a logo for circular */
+}
+
+.cabecalho .slogan {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.produto-img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+

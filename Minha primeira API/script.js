@@ -9,9 +9,9 @@ const btnListUsers = document.getElementById('btnListUsers');
 const editModal = document.getElementById('editModal');
 const editUserForm = document.getElementById('editUserForm');
 const btnCancelEdit = document.getElementById('btnCancelEdit');
-const editIdInput = document.getElementById('editID');
-const editNameInput = document.getElementById('editName');
-const editAgeInput = document.getElementById('editAge');
+const editIdInput = document.getElementById('editId');
+const editPedidoInput = document.getElementById('editName');
+const editPrecoInput = document.getElementById('editAge');
 
 // Função para buscar e renderizar usuários
 function fetchAndRenderUsers() {
@@ -84,9 +84,9 @@ function renderUsers(users) {
 
         userCard.innerHTML = `
             <div class="user-info">
-                <p><strong>ID:</strong> ${user.id}</p>
-                <p><strong>Nome:</strong> ${user.nome}</p>
-                <p><strong>Idade:</strong> ${user.idade}</p>
+                <p><strong>Numero do pedido:</strong> ${user.id}</p>
+                <p><strong>Pedido:</strong> ${user.pedido}</p>
+                <p><strong>Preço:</strong> R$ ${user.preco}</p>
             </div>
             <div class="card-buttons">
                 <button class="btn-edit">Editar</button>
@@ -99,8 +99,8 @@ function renderUsers(users) {
 
         editBtn.addEventListener('click', () => {
             editIdInput.value = user.id;
-            editNameInput.value = user.nome;
-            editAgeInput.value = user.idade;
+            editPedidoInput.value = user.pedido;
+            editPrecoInput.value = user.preco;
             editModal.style.display = 'flex';
         });
 
@@ -123,10 +123,10 @@ btnListUsers.addEventListener('click', fetchAndRenderUsers);
 addUserForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const newUserName = document.getElementById('addName').value;
-    const newUserAge = parseInt(document.getElementById('addAge').value);
+    const novoPedido = document.getElementById('addName').value;
+    const novoPreco = parseFloat(document.getElementById('addAge').value);
 
-    addUser({ nome: newUserName, idade: newUserAge });
+    addUser({ pedido: novoPedido, preco: novoPreco });
 });
 
 // Submissão do formulário de edição
@@ -134,10 +134,10 @@ editUserForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const userId = editIdInput.value;
-    const newName = editNameInput.value;
-    const newAge = parseInt(editAgeInput.value);
+    const novoPedido = editPedidoInput.value;
+    const novoPreco = parseFloat(editPrecoInput.value);
 
-    editUser(userId, { nome: newName, idade: newAge });
+    editUser(userId, { pedido: novoPedido, preco: novoPreco });
 });
 
 // Cancelar edição

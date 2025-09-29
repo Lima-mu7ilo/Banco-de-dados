@@ -12,6 +12,7 @@ const btnCancelEdit = document.getElementById('btnCancelEdit');
 const editIdInput = document.getElementById('editId');
 const editPedidoInput = document.getElementById('editName');
 const editPrecoInput = document.getElementById('editAge');
+const editImageInput = document.getElementById('editImage');
 
 // Função para buscar e renderizar usuários
 function fetchAndRenderUsers() {
@@ -84,6 +85,7 @@ function renderUsers(users) {
 
         userCard.innerHTML = `
             <div class="user-info">
+                <img src="${user.image || ''}" alt="Imagem do Produto" class="produto-img" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:10px;object-fit:cover;">
                 <p><strong>Numero do pedido:</strong> ${user.id}</p>
                 <p><strong>Pedido:</strong> ${user.pedido}</p>
                 <p><strong>Preço:</strong> R$ ${user.preco}</p>
@@ -101,6 +103,7 @@ function renderUsers(users) {
             editIdInput.value = user.id;
             editPedidoInput.value = user.pedido;
             editPrecoInput.value = user.preco;
+            editImageInput.value = user.image || '';
             editModal.style.display = 'flex';
         });
 
@@ -125,8 +128,9 @@ addUserForm.addEventListener('submit', (e) => {
 
     const novoPedido = document.getElementById('addName').value;
     const novoPreco = parseFloat(document.getElementById('addAge').value);
+    const novaImagem = document.getElementById('addImage').value;
 
-    addUser({ pedido: novoPedido, preco: novoPreco });
+    addUser({ pedido: novoPedido, preco: novoPreco, image: novaImagem });
 });
 
 // Submissão do formulário de edição
@@ -136,8 +140,9 @@ editUserForm.addEventListener('submit', (e) => {
     const userId = editIdInput.value;
     const novoPedido = editPedidoInput.value;
     const novoPreco = parseFloat(editPrecoInput.value);
+    const novaImagem = editImageInput.value;
 
-    editUser(userId, { pedido: novoPedido, preco: novoPreco });
+    editUser(userId, { pedido: novoPedido, preco: novoPreco, image: novaImagem });
 });
 
 // Cancelar edição

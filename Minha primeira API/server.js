@@ -17,11 +17,11 @@ app.listen(PORT, () =>{
 })
 
 let usuarios = [
-    {id: 1, pedido: "feijoada", preco: 25.30},
-    {id: 2, pedido: "hamburguer", preco: 10.00},
-    {id: 3, pedido: "pizza", preco: 22.50},
-    {id: 4, pedido: "sushi", preco: 99.99},
-    {id: 5, pedido: "salada", preco: 21.75}
+    {image: "https://www.comidaereceitas.com.br/img/sizeswp/1200x675/2007/12/Pizza_quatro_queijossss.jpg", id: 1, pedido: "pizza de quatro queijos", preco: 25.30},
+    {image: "https://www.confeiteiradesucesso.com/wp-content/uploads/2023/12/pizzafrangocomqueijo.jpg", id: 2, pedido: "pizza de frango", preco: 40.00},
+    {image: "https://swiftbr.vteximg.com.br/arquivos/ids/208740-636-636/618283-pizza-artesanal-calabresa_inn.jpg?v=638870725352100000", id: 3, pedido: "pizza de calabresa", preco: 25.50},
+    {image: "https://receitason.com/wp-content/uploads/2023/04/pizza-de-atum-caseira.jpg", id: 4, pedido: "pizza de atum", preco: 35.99},
+    {image: "https://www.ogastronomo.com.br/upload/389528334-curiosidades-sobre-a-pizza-portuguesa.jpg", id: 5, pedido: "pizza portuguesa", preco: 21.75}
 ]
  
 app.get('/', (req, res) => {
@@ -68,7 +68,8 @@ app.post('/usuarios', (req, res) => {
     const novoPedido = {
         id: ultimoID + 1,
         pedido: req.body.pedido,
-        preco: req.body.preco
+        preco: req.body.preco,
+        image: req.body.image
     };
 
     usuarios.push(novoPedido)
@@ -79,6 +80,7 @@ app.put('/usuarios/:id', (req, res) =>{
     const id = req.params.id
     const pedido = req.body.pedido
     const preco = req.body.preco
+    const image = req.body.image
 
     const usuario = usuarios.find(u => u.id == id)
 
@@ -88,6 +90,7 @@ app.put('/usuarios/:id', (req, res) =>{
 
     usuario.pedido = pedido || usuario.pedido
     usuario.preco = preco || usuario.preco
+    usuario.image = image || usuario.image
     res.json(usuario)
 })
 

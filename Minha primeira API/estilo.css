@@ -10,6 +10,26 @@ body {
     background-color: #f4f4f4; /* Cor de fundo suave */
     color: #333;
 }
+.botao{
+    display: flex;
+    justify-content: right;
+
+}
+.botaozinho{
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.botaozinho:hover{
+    background-color: #FFC107;
+    color: white;
+}
+
 
 /* 1. ESTILO DO CABEÇALHO (HEADER) */
 .cabecalho {

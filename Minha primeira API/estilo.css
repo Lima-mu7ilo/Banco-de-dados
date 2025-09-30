@@ -1,13 +1,13 @@
-/* Reset básico para melhor controle de estilos */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Usando a fonte linkada no HTML */
+    font-family: 'Montserrat', sans-serif; 
 }
 
 body {
-    background-color: #f4f4f4; /* Cor de fundo suave */
+    background-color: #f4f4f4; 
     color: #333;
 }
 .botao{
@@ -31,25 +31,24 @@ body {
 }
 
 
-/* 1. ESTILO DO CABEÇALHO (HEADER) */
 .cabecalho {
-    background-color: #A00000; /* Vermelho escuro ou cor principal da marca */
+    background-color: #A00000;
     color: white;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid #FFC107; /* Borda amarela/dourada para destaque */
+    border-bottom: 5px solid #FFC107; 
 }
 
 .cabecalho h1 {
-    font-size: 3em; /* Tamanho grande para o nome da loja */
+    font-size: 3em; 
     margin-bottom: 5px;
 }
 
 .cabecalho .logo img {
-    max-width: 150px; /* Tamanho da logo */
+    max-width: 150px; 
     height: 130px;
     margin-bottom: 10px;
-    border-radius: 50%; /* Se a logo for circular */
+    border-radius: 50%;
 }
 
 .cabecalho .slogan {
@@ -57,9 +56,9 @@ body {
     font-weight: 400;
 }
 
-/* 2. ESTILO DA NAVEGAÇÃO (NAV) */
+
 .navegacao {
-    background-color: #333; /* Fundo escuro para contraste */
+    background-color: #333; 
     padding: 15px 0;
     text-align: center;
 }
@@ -68,27 +67,27 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px; /* Espaço entre os links */
+    gap: 25px; 
 }
 
 .navegacao a {
     text-decoration: none;
-    color: #FFC107; /* Cor de destaque */
+    color: #FFC107; 
     font-weight: 700;
     padding: 5px 10px;
     transition: color 0.3s;
 }
 
 .navegacao a:hover {
-    color: white; /* Muda a cor ao passar o mouse */
+    color: white; 
     border-bottom: 2px solid white;
 }
 
-/* 3. ESTILO DA SEÇÃO PRINCIPAL E DO GRID */
+
 .secao-cardapio {
     width: 90%;
     max-width: 1200px;
-    margin: 30px auto; /* Centraliza a seção e dá margem */
+    margin: 30px auto; 
     padding: 20px;
 }
 
@@ -100,15 +99,15 @@ body {
     margin: 40px 0 20px 0;
 }
 
-/* O PODER DO GRID PARA AS CAIXAS DE PRODUTOS */
+
 .grid-produtos {
     display: grid;
-    /* Define 3 colunas de tamanho igual. Adapta automaticamente para menos colunas se a tela for pequena */
+   
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px; /* Espaço entre os quadrados de produto */
+    gap: 25px; 
 }
 
-/* ESTILO DE CADA CAIXA DE PRODUTO */
+
 .produto-box {
     background-color: white;
     border-radius: 8px;
@@ -119,14 +118,14 @@ body {
 }
 
 .produto-box:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .produto-img {
     width: 100%;
-    height: 200px; /* Altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    height: 200px;
+    object-fit: cover; 
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -146,13 +145,12 @@ body {
 .preco {
     font-weight: 700;
     font-size: 1.3em;
-    color: #28a745; /* Cor verde para destaque de preço */
+    color: #28a745; 
 }
 
-/* MEDIA QUERIES (OPCIONAL, MAS IMPORTANTE PARA RESPONSIVIDADE) */
 @media (max-width: 768px) {
     .grid-produtos {
-        /* Em telas menores (celulares), mostra apenas 1 ou 2 colunas */
+        
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
@@ -161,11 +159,7 @@ body {
     }
 }
 
-/* ======================================= */
-/* REGRAS DE RESPONSIVIDADE (MEDIA QUERIES) */
-/* ======================================= */
 
-/* Aplica estas regras para telas de até 768px de largura (Tablets e Celulares) */
 @media (max-width: 768px) {
 
     /* CABEÇALHO */
@@ -174,22 +168,20 @@ body {
     }
     
     .cabecalho .logo img {
-        max-width: 120px; /* Reduz o tamanho da logo */
+        max-width: 120px; 
     }
 
     .cabecalho h1 {
-        font-size: 2.2em; /* Reduz o nome da loja */
+        font-size: 2.2em; 
     }
 
     .cabecalho .slogan {
         font-size: 1em;
     }
 
-    /* NAVEGAÇÃO (NAV) */
+    
     .navegacao ul {
-        /* Em telas menores, os links podem ser empilhados verticalmente 
-           ou ter menos espaço (gap) se o display for flex. */
-        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        flex-wrap: wrap;
         gap: 15px;
     }
 
@@ -197,9 +189,9 @@ body {
         font-size: 0.9em;
     }
 
-    /* SEÇÃO PRINCIPAL E PRODUTOS */
+    
     .secao-cardapio {
-        width: 95%; /* Usa mais da largura da tela */
+        width: 95%;
         padding: 10px;
     }
     
@@ -208,16 +200,14 @@ body {
         margin: 30px 0 15px 0;
     }
 
-    /* GRID DE PRODUTOS: A CHAVE DA RESPONSIVIDADE */
+    
     .grid-produtos {
-        /* Garante que em celulares, os produtos fiquem em uma coluna, 
-           mas permite 2 colunas se houver espaço (minmax) */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
     
     .produto-img {
-        height: 180px; /* Reduz um pouco a altura da imagem */
+        height: 180px; 
     }
 
     .produto-box h3 {
@@ -226,11 +216,11 @@ body {
 
 }
 
-/* Aplica regras específicas para celulares (telas muito pequenas, até 480px) */
+
 @media (max-width: 480px) {
     
     .grid-produtos {
-        /* Força os produtos a ficarem em uma coluna única para melhor visualização */
+        
         grid-template-columns: 1fr;
     }
     

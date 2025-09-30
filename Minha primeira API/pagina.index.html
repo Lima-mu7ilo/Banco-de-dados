@@ -2,13 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Cardápio - La Fornalha </title>
     <link rel="stylesheet" href="estilo.css">
     <link href="" rel="stylesheet">
+=======
+    <title>La </title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+>>>>>>> abd2b63e39df3b595a9c6b532a22890325c9ba7b
 </head>
 <body>
 
     <header class="cabecalho">
+
+        <div class="botao">
+           <a href="login.html"><button class="botaozinho">Area do usuario</button></a> 
+        </div>
         <div class="logo">
             <img src="Gemini_Generated_Image_651uh9651uh9651u.png" alt="Logo da Pizzaria Sabor Supremo">
         </div>
@@ -26,85 +37,8 @@
     </nav>
 
     <main class="secao-cardapio">
-
-        <section id="classicas">
-            <h2>PIZZAS CLÁSSICAS</h2>
-            <div class="grid-produtos">
-                <div class="produto-box">
-                    <img src="pizza_mussarela.jpg" alt="Pizza Mussarela" class="produto-img">
-                    <h3>Mussarela</h3>
-                    <p class="descricao">Molho de tomate, mussarela, azeitonas e orégano.</p>
-                    <p class="preco">R$ 50,00</p>
-                </div>
-                <div class="produto-box">
-                    <img src="pizza_calabresa.jpg" alt="Pizza Calabresa" class="produto-img">
-                    <h3>Calabresa</h3>
-                    <p class="descricao">Mussarela, calabresa, cebola e toque de pimenta.</p>
-                    <p class="preco">R$ 55,00</p>
-                </div>
-                <div class="produto-box">
-                    <img src="pizza_portuguesa.jpg" alt="Pizza Portuguesa" class="produto-img">
-                    <h3>Portuguesa</h3>
-                    <p class="descricao">Presunto, ovos, azeitona, cebola e mussarela.</p>
-                    <p class="preco">R$ 58,00</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="especiais">
-            <h2>PIZZAS ESPECIAIS</h2>
-            <div class="grid-produtos">
-                <div class="produto-box">
-                    <img src="pizza_especial.jpg" alt="Pizza Especial da Casa" class="produto-img">
-                    <h3>Suprema da Casa</h3>
-                    <p class="descricao">Combinação exclusiva de filé mignon, bacon e cream cheese.</p>
-                    <p class="preco">R$ 75,00</p>
-                </div>
-                <div class="produto-box">
-                    <img src="pizza_frango.jpg" alt="Pizza Frango Catupiry" class="produto-img">
-                    <h3>Frango com Catupiry</h3>
-                    <p class="descricao">Frango desfiado temperado com o legítimo Catupiry.</p>
-                    <p class="preco">R$ 65,00</p>
-                </div>
-                </div>
-        </section>
-
-                <section id="doces">
-            <h2>PIZZAS DOCES</h2>
-            <div class="grid-produtos">
-                <div class="produto-box">
-                    <img src="pizza_especial.jpg" alt="Pizza Especial da Casa" class="produto-img">
-                    <h3>Suprema da Casa</h3>
-                    <p class="descricao">Combinação exclusiva de filé mignon, bacon e cream cheese.</p>
-                    <p class="preco">R$ 75,00</p>
-                </div>
-                <div class="produto-box">
-                    <img src="pizza_frango.jpg" alt="Pizza Frango Catupiry" class="produto-img">
-                    <h3>Frango com Catupiry</h3>
-                    <p class="descricao">Frango desfiado temperado com o legítimo Catupiry.</p>
-                    <p class="preco">R$ 65,00</p>
-                </div>
-                </div>
-        </section>
-
-                <section id="bebidas">
-            <h2>BEBIDAS</h2>
-            <div class="grid-produtos">
-                <div class="produto-box">
-                    <img src="pizza_especial.jpg" alt="Pizza Especial da Casa" class="produto-img">
-                    <h3>Suprema da Casa</h3>
-                    <p class="descricao">Combinação exclusiva de filé mignon, bacon e cream cheese.</p>
-                    <p class="preco">R$ 75,00</p>
-                </div>
-                <div class="produto-box">
-                    <img src="pizza_frango.jpg" alt="Pizza Frango Catupiry" class="produto-img">
-                    <h3>Frango com Catupiry</h3>
-                    <p class="descricao">Frango desfiado temperado com o legítimo Catupiry.</p>
-                    <p class="preco">R$ 65,00</p>
-                </div>
-                </div>
-        </section>
-        <script src="script2.js"></script>
+        <div id="user-cards-container" class="cards-grid"></div>
+        <script src="script.js"></script>
     </main>
 </body>
 </html>

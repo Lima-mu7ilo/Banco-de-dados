@@ -2,7 +2,7 @@ const API_URL = "http://localhost:3005/usuarios";
 
 // Seleção de elementos do HTML
 const userCardsContainer = document.getElementById('user-cards-container');
-// Apenas cards para pagina.index.html
+const addUserForm = document.getElementById('addUserForm');
 
 // Função para buscar e renderizar usuários
 function fetchAndRenderUsers() {
@@ -30,6 +30,17 @@ function addUser(userData) {
         fetchAndRenderUsers();
     })
     .catch(error => console.error("Erro ao adicionar usuário:", error));
+}
+
+// Adicionar evento ao formulário para evitar refresh
+if (addUserForm) {
+    addUserForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const pedido = document.getElementById('addName').value;
+        const preco = parseFloat(document.getElementById('addAge').value);
+        const image = document.getElementById('addImage').value;
+        addUser({ pedido, preco, image });
+    });
 }
 
 // Função para editar usuário
@@ -82,11 +93,12 @@ function renderUsers(users) {
         `;
         userCardsContainer.appendChild(userCard);
     });
+
+    
 }
 
 // Carregar cards ao iniciar
 fetchAndRenderUsers();
 
-/* teste */
 
 

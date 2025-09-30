@@ -87,6 +87,6 @@ function renderUsers(users) {
 // Carregar cards ao iniciar
 fetchAndRenderUsers();
 
-
+/* teste */
 
 

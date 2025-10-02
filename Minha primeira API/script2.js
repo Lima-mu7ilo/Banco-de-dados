@@ -1,4 +1,4 @@
-```javascript
+
 // script2.js
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -63,4 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-```
+

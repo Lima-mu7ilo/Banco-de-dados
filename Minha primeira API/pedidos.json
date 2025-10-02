@@ -40,5 +40,11 @@
     "pedido": "pizza de brigadeiro ",
     "preco": 50,
     "image": "https://mavalerio.com.br/site/wp-content/uploads/2018/12/160722_pizzas-002-v2-500x340.png"
+  },
+  {
+    "id": 8,
+    "pedido": "pizza de brigadeiro ",
+    "preco": 35,
+    "image": "https://www.sabornamesa.com.br/media/k2/items/cache/ada34cd2101afafaba465aad112ee3c1_XL.jpg"
   }
 ]

@@ -1,8 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f1f1;
+    background-color:   #474646;
     margin: 0;
-    padding: 20px;
+   
+
 }
 
 .container {
@@ -212,7 +213,6 @@ h2 {
 .cabecalho {
     background-color: #A00000; /* Vermelho escuro ou cor principal da marca */
     color: white;
-    padding: 40px 20px;
     text-align: center;
     border-bottom: 5px solid #FFC107; /* Borda amarela/dourada para destaque */
 }
